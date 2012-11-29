@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Daniel Westendorf"]
   gem.email         = ["daniel@prowestech.com"]
   gem.description   = "Rack::Ermahgerd is a simple Rack middleware that translates the content of a web page into Ermahgerd-ish"
-  gem.summary       = "Translate your web content with the ermahgerd gem"
+  gem.summary       = "Translate your web content to ERMAHGERD-ish"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

@@ -18,7 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use it as middleware in your rack based application. 
+
+    require 'rack-ermahgerd'
+    use Rack::Ermahgerd
 
 ## Contributing
 
