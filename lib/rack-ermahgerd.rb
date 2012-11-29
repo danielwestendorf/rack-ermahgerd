@@ -10,11 +10,12 @@ module Rack
     def call(env)
       status, headers, response = @app.call(env)
 
-      response_body = ""
-      response.each {|part| response_body << translate(part)}
-      headers["Content-Length"] = Rack::Utils.bytesize(response_body.to_s).to_s
-
-      [status, headers, response_body]
+      return [status, headers, response] if response.class != Array
+      response.each_with_index do |res, i|
+        response[i] = translate(res) if res.class == String
+      end
+      headers["Content-Length"] = Rack::Utils.bytesize(response.to_s).to_s
+      [status, headers, response]
     end
 
     def translate(html)
@@ -24,7 +25,7 @@ module Rack
           x.content = ermahgerd_it(x.content)
         end
       end
-      doc.to_s
+      doc.serialize(encoding: 'UTF-8')
     end
 
     def ermahgerd_it(text)
