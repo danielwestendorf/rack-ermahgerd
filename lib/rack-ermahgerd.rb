@@ -30,24 +30,24 @@ module Rack
 
     def ermahgerd_it(text)
       text.upcase!
-      text.gsub!(/[AEIOUY]r(?! )/i, 'E');
-      text.gsub!(/AA/i, 'A');
-      text.gsub!(/EE/i, 'E');
-      text.gsub!(/II/i, 'I');
-      text.gsub!(/OO/i, 'O');
-      text.gsub!(/UU/i, 'U');
-      text.gsub!(/YY/i, 'Y');
-      text.gsub!(/[AEIOUY]{2,}/i, 'E');
-      text.gsub!(/[AEIOUY](?! )/i, 'ER');
-      text.gsub!(/[Y]/i, 'ER');
-      text.gsub!(/ERH/i, 'ER');
-      text.gsub!(/ERR/i, 'ER');
-      text.gsub!(/MER/i, 'MAH');
-      text.gsub!('ERWERSERMAH', 'ERSUM');
-      text.gsub!('ERWERSERME', 'ERSUM');
-      text.gsub!('GERSERBERMPS', 'GERSBERMS');
-      text.gsub!('MAHMAH', 'MERM');
-      text.gsub!('MAHME', 'MERM');
+      text.gsub!(/[AEIOUY]r(?! )/i, 'E')
+      text.gsub!(/AA/i, 'A')
+      text.gsub!(/EE/i, 'E')
+      text.gsub!(/II/i, 'I')
+      text.gsub!(/OO/i, 'O')
+      text.gsub!(/UU/i, 'U')
+      text.gsub!(/YY/i, 'Y')
+      text.gsub!(/[AEIOUY]{2,}/i, 'E')
+      text.gsub!(/[AEIOUY](?! )/i, 'ER')
+      text.gsub!(/[Y]/i, 'ER')
+      text.gsub!(/ERH/i, 'ER')
+      text.gsub!(/ERR/i, 'ER')
+      text.gsub!(/MER/i, 'MAH')
+      text.gsub!('ERWERSERMAH', 'ERSUM')
+      text.gsub!('ERWERSERME', 'ERSUM')
+      text.gsub!('GERSERBERMPS', 'GERSBERMS')
+      text.gsub!('MAHMAH', 'MERM')
+      text.gsub!('MAHME', 'MERM')
       text
     end
   end

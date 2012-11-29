@@ -1,6 +1,6 @@
 # Rack::Ermahgerd
 
-TODO: Write a gem description
+Translate the text of a Rack application's web response to ERMAHGERD-ish with this piece of Rack Middleware. It modifies the response, so newer versions of Rails will not work with it. I've tested it to be working with Sinatra and plain rack apps. 
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Use it as middleware in your rack based application. 
+Use it as middleware in your rack based application. In your Sinatra app or Rackup file add the following:
 
     require 'rack-ermahgerd'
     use Rack::Ermahgerd
