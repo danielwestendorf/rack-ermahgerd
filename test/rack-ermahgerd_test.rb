@@ -29,4 +29,9 @@ class TestRackErmahgerd < Test::Unit::TestCase
     assert_match /GERSBERMS!/, last_response.body
   end
 
+  should "return the correct content length" do
+    get '/'
+    assert_equal Rack::Utils.bytesize(last_response.body.to_s).to_s, last_response.headers['Content-Length']
+  end
+
 end
