@@ -14,7 +14,6 @@ module Rack
       response.each_with_index do |res, i|
         response[i] = translate(res) if res.class == String
       end
-      p Rack::Utils.bytesize(response.join('')).to_s
       headers["Content-Length"] = Rack::Utils.bytesize(response.join('')).to_s
       [status, headers, response]
     end
